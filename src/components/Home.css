@@ -1,0 +1,154 @@
+/* src/Home.css */
+
+.forecast-entry{
+    margin: 500px;
+  top:0;
+  height: 0;
+}
+
+.header {
+  background-color: #008CBA;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  padding: 3px 30px;
+  align-items: center;
+}
+
+.welcome h3 {
+  text-align: center;
+  font-size: 39px;
+  text-transform: uppercase;
+  color: #222;
+  letter-spacing: 1px;
+
+  font-family: "Playfair Display", serif;
+  font-weight: 400;
+  background-color: transparent;
+}
+
+.welcome h3 span {
+  margin-top: 5px;
+  font-size: 15px;
+  color: transparent;
+  word-spacing: 1px;
+  font-weight: normal;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-template-rows: 27px 0;
+  grid-gap: 20px;
+  align-items: center;
+}
+
+.welcome h3 span:after,
+.welcome h3 span:before {
+  content: " ";
+  display: block;
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  height: 5px;
+  background-color: #f8f8f8;
+}
+
+.platform-name {
+  font-size: 32px;
+  color: white;
+  text-shadow: 2px 2px 4px #000000;
+}
+
+.nav-buttons {
+  display: flex;
+}
+
+.nav-button {
+  background-color: #d2e2e3;
+  color: #1e90ff;
+  border: none;
+  padding: 10px;
+  margin-left: 10px;
+  cursor: pointer;
+  border-radius:5% ;
+}
+
+.nav-button:hover {
+  background-color: #f0f0f0;
+}
+
+.main-content {
+  display: flex;
+  flex-direction: column; 
+  align-items: center;
+  gap: 30px; 
+  padding: 242px; 
+}
+.input-box{
+  display: flex; 
+  gap: 10px;
+  box-sizing:content-box;
+
+  
+}
+
+.date-input, .location-input {
+  padding: 10px;
+  border: 2px solid black; /* Visible border */
+  border-radius: 5px;
+  font-size: 16px;
+  background-color: white; /* Set background to white for clarity */
+  color: black; /* Text color */
+}
+
+/* Footer */
+.footer {
+  background-color: #008CBA; /* Blue background */
+  color: white; /* White text */
+  text-align: center; /* Center the text horizontally */
+  padding: 1px; /* Add padding to ensure content isn't cramped */
+  font-size: 14px; /* Adjust font size if needed */
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%; 
+}
+
+.button1 {
+  background-color: white;
+  color: #008CBA;
+  border: 2px solid #008CBA;
+}
+
+.button1:hover {
+  background-color: #008CBA;
+  color: white;
+}
+
+.button {
+  border: none;
+  color: #008CBA;
+  padding: 16px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 10%;
+}
+
+.home-container {
+  background-image: url('C:/Users/user/Downloads/blue_sky_exp.jpg');
+  background-size: cover;
+}
+
+
+
+.header, .main-content, .footer {
+  position: relative;
+  z-index: 2;
+}
