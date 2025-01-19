@@ -21,10 +21,7 @@
   text-transform: uppercase;
   color: #222;
   letter-spacing: 1px;
-
   font-family: "Playfair Display", serif;
-  font-weight: 400;
-  background-color: transparent;
 }
 
 .welcome h3 span {
@@ -32,15 +29,11 @@
   font-size: 15px;
   color: transparent;
   word-spacing: 1px;
-  font-weight: normal;
   letter-spacing: 2px;
   text-transform: uppercase;
   font-family: "Raleway", sans-serif;
-  font-weight: 500;
-
   display: grid;
   grid-template-columns: 1fr max-content 1fr;
-  grid-template-rows: 27px 0;
   grid-gap: 20px;
   align-items: center;
 }
@@ -90,26 +83,24 @@
   display: flex; 
   gap: 10px;
   box-sizing:content-box;
-
-  
 }
 
 .date-input, .location-input {
   padding: 10px;
-  border: 2px solid black; /* Visible border */
+  border: 2px solid black; 
   border-radius: 5px;
   font-size: 16px;
-  background-color: white; /* Set background to white for clarity */
-  color: black; /* Text color */
+  background-color: white; 
+  color: black; 
 }
 
-/* Footer */
+
 .footer {
-  background-color: #008CBA; /* Blue background */
-  color: white; /* White text */
-  text-align: center; /* Center the text horizontally */
-  padding: 1px; /* Add padding to ensure content isn't cramped */
-  font-size: 14px; /* Adjust font size if needed */
+  background-color: #008CBA; 
+  color: white; 
+  text-align: center; 
+  padding: 1px; 
+  font-size: 14px; 
   position: absolute;
   left: 0;
   bottom: 0;

@@ -36,6 +36,7 @@ const LoginPopup = ({ onClose }) => {
       return;
   }
     try {
+      {/*Sends a POST request using Axios with the email and password as the request body.*/}
         const response = await axios.post('http://127.0.0.1:5000/login', {email,password});
         setMessage(response.data.message);
         if (response.data.status === 'success') {
@@ -51,6 +52,8 @@ const LoginPopup = ({ onClose }) => {
 };
   return (
     <>
+        {/*Popup overlay when user is not signing in, not logged in, and feedback is not open*/}
+
       {!isSigninOpen && !isLoggedIn && !isFeedbackOpen && (
         <div className="popup-overlay">
           <div className="popup-container">

@@ -17,7 +17,7 @@ const SigninPopup = ({ onClose }) => {
   const handleSignUp = async (e) => {
     e.preventDefault();
 
-    // Basic validation
+    // validation
     if (!email || !password || !confirmPassword) {
         setMessage('Please fill in all fields');
         return;
@@ -28,6 +28,7 @@ const SigninPopup = ({ onClose }) => {
     }
 
     try {
+      {/*// Sends a POST request to 'http://127.0.0.1:5000/signup' using Axios with the username, email, and password.*/}
         const response = await axios.post('http://127.0.0.1:5000/signup', { username,email, password });
         setMessage(response.data.message);
 
@@ -42,7 +43,6 @@ const SigninPopup = ({ onClose }) => {
     }
   };
   return (
- 
    <div className="popup-overlay">
       <div className="popup-container">
         <button className="close-button" onClick={onClose}>

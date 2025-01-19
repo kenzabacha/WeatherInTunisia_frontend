@@ -14,7 +14,7 @@ const Home = () => {
   const [error, setError] = useState(null);  // State to store error messages
   const[timeDate,setTimeDate]=useState('');  
   const time=["00:00","03:00","06:00","09:00","12:00","15:00","18:00","21:00","00:00"] ;
-  const [isDoYouKnowPopupOpen, setIsDoYouKnowPopupOpen] = useState(false);
+  const [isDoYouKnowPopupOpen, setIsDoYouKnowPopupOpen] = useState(false); // do you know pop up state
 
   const toggleDoYouKnowPopup = () => {
     setIsDoYouKnowPopupOpen(!isDoYouKnowPopupOpen);
@@ -40,8 +40,8 @@ const Home = () => {
   
     
     try {
-      const response = await fetch(`http://localhost:5000/weather?city=${city}&date=${date}`);
-      const data = await response.json();
+      const response = await fetch(`http://localhost:5000/weather?city=${city}&date=${date}`); //await simplifies working with asynchronous operations like fetch()
+      const data = await response.json(); //the code waits for the json() method to resolve before it can log the data
       
       if (response.ok) {
         console.log(data)
@@ -57,13 +57,15 @@ const Home = () => {
     }
     
   };
-  console.log(weatherData)
+  //console.log(weatherData)
   
-  const filteredData = weatherData?.filter((entry) =>
+  // Filter the weatherData array to find entries that match the specified date and time
+  //?. ensures filter is called only if weatherData is not null or undefined.
+  const filteredData = weatherData?.filter((entry) => 
     entry.datetime.startsWith(date)&& entry.datetime.substring(11, 16) === timeDate
  );
   
-  console.log(filteredData)
+  //console.log(filteredData)
 
   const handleChangeValue = (event) => {
     setTimeDate(event.target.value);
@@ -130,8 +132,11 @@ const Home = () => {
       <footer className="footer">
         <p>2025 All rights reserved.</p>
       </footer>
-      
+
+      {/* Conditionally render LoginPopup if isPopupOpen is true */}      
       {isPopupOpen && <LoginPopup onClose={togglePopup} />}
+
+      {/* Conditionally render DoYouKnowPopup if isDoYouKnowPopupOpen is true */}
       {isDoYouKnowPopupOpen && <DoYouKnowPopup onClose={toggleDoYouKnowPopup} />}
     </div>
   );

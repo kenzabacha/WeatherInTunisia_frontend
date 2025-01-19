@@ -33,44 +33,7 @@
     background-color: #ff1c1c;
   }
   
-  .login-button {
-    background-color: #1e90ff;
-    color: white;
-    border: none;
-    padding: 10px 20px;
-    border-radius: 5px;
-    cursor: pointer;
-   
-  }
-  
-  .login-button:hover {
-    background-color: #1c86ee;
-  }
-  .form-group {
-    margin-bottom: 15px;
-    text-align: left;
-  }
-  
-  .form-group label {
-    display: block;
-    margin-bottom: 5px;
-    font-size: 14px;
-    font-weight: bold;
-  }
-  
-  .form-group input {
-    width: 100%;
-    padding: 5px;
-    border: 10px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  .form-actions {
-    display: flex;
-    justify-content: space-between;
-    margin-top: 15px;
-  }
-  
+ 
   .submit-button,
   .create-account-button {
     background-color: #1e90ff;
@@ -88,10 +51,10 @@
 
   .feedback_text , .date_input , .time_input {
     padding: 10px;
-    border:2px solid black; /* Visible border */
+    border:2px solid black; 
     border-radius: 5px;
     font-size: 16px;
-    background-color: white; /* Set background to white for clarity */
-    color: black; /* Text color */
+    background-color: white; 
+    color: black; 
     size: 100% ;
 }

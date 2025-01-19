@@ -4,12 +4,13 @@ import "./do_you_know.css";
 
 const DoYouKnowPopup = ({ onClose }) => {
   const [facts, setFacts] = useState([]);
-  const [currentCategory, setCurrentCategory] = useState('general_facts'); // Default category
+  const [currentCategory, setCurrentCategory] = useState('general_facts'); 
   const [filteredFacts, setFilteredFacts] = useState([]);
 
   // Fetch facts function
   const fetchFacts = async () => {
     try {
+      {/*Sends a get request to 'http://127.0.0.1:5000/facts' using Axios*/ }
       const response = await axios.get('http://127.0.0.1:5000/facts');
       setFacts(response.data);
       filterFacts('general_facts'); // Set default category
